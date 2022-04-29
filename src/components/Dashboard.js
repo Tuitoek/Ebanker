@@ -10,12 +10,10 @@ const Dashboard = () => {
     const [username, setUsername] = useState('');
     const [token, setToken] = useState('');
     const [expire, setExpire] = useState('');
-    const [users, setUsers] = useState([]);
     const navigate = useNavigate();
 
     useEffect(() => {
         refreshToken();
-        getUsers();
     });
 
     const refreshToken = async() => {
@@ -49,14 +47,6 @@ const Dashboard = () => {
         return Promise.reject(error);
     });
 
-    const getUsers = async() => {
-        const response = await axiosJWT.get('http://localhost:5000/users', {
-            headers: {
-                Authorization: `Bearer ${token}`
-            }
-        });
-        setUsers(response.data);
-    }
     return ( <
         div className = "container mt-5" >
         <
@@ -65,5 +55,6 @@ const Dashboard = () => {
         div >
     )
 }
+
 
 export default Dashboard

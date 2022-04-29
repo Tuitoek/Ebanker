@@ -1,6 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect } from 'react'
-import { useHistory } from 'react-router-dom';
+import React from 'react'
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
@@ -12,15 +11,10 @@ const Savings = () => {
     const initialDeposit = 20;
     const savingsBalance = 0;
 
-    function transferFunds() {
-        const fundsTransfer = savingsBalance - initialDeposit
-        console.log(fundsTransfer)
-    }
-
-    function withdrawFunds() {
-        const fundsWithdrawn = savingsBalance
-        console.log()
-    }
+    // function transferFunds() {
+    //     const fundsTransfer = savingsBalance - initialDeposit
+    //     console.log(fundsTransfer)
+    // }
 
     return ( <
         div className = "col-md-3" >

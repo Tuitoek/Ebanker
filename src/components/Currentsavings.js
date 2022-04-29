@@ -1,5 +1,5 @@
 // /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Divider from "@mui/material/Divider";
@@ -12,10 +12,10 @@ const Currentsavings = () => {
     const initialDeposit = 20;
     const fundsRequested = 15
 
-    function transferFunds() {
-        const fundsTransfer = fundsRequested - initialDeposit
-        console.log(fundsTransfer)
-    }
+    // function transferFunds() {
+    //     const fundsTransfer = fundsRequested - initialDeposit
+    //     console.log(fundsTransfer)
+    // }
 
     return ( <
         div className = "col-md-3" >
